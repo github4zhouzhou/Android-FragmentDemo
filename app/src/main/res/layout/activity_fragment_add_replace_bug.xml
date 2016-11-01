@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ActivityMain">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/id_btn_add_frg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="add frag1" />
+
+            <Button
+                android:id="@+id/id_btn_add_frg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="add frag2" />
+
+            <Button
+                android:id="@+id/id_btn_add_frg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="add frag3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/id_btn_add_frg4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="add frag4" />
+
+            <Button
+                android:id="@+id/id_btn_add_frg5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="add frag5" />
+
+            <Button
+                android:id="@+id/id_btn_replace_frg5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="replace frag5" />
+
+            <Button
+                android:id="@+id/id_btn_print_stack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="print back stack" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/id_tv_stack_val"
+        android:text="hello world"
+        android:layout_margin="10dip"
+        android:textSize="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:id="@+id/id_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom" />
+
+
+</LinearLayout>

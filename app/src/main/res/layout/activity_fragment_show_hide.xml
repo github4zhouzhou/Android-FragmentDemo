@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ActivityMain">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/id_btn_add_frg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="add frag1" />
+
+            <Button
+                android:id="@+id/id_btn_add_frg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="add frag2" />
+
+            <Button
+                android:id="@+id/id_btn_add_frg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="add frag3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/id_btn_frg3_hide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="frag3 hide" />
+
+            <Button
+                android:id="@+id/id_btn_frg3_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="frag3 show" />
+
+            <Button
+                android:id="@+id/id_btn_frg2_hide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="frag2 hide" />
+
+            <Button
+                android:id="@+id/id_btn_frg2_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="frag2 show" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/id_btn_frg3_detach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="frag3 detach" />
+
+            <Button
+                android:id="@+id/id_btn_frg3_attach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="frag3 attach" />
+
+            <Button
+                android:id="@+id/id_btn_frg2_detach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="frag2 detach" />
+
+            <Button
+                android:id="@+id/id_btn_frg2_attach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="frag2 attach" />
+        </TableRow>
+        <Button
+            android:id="@+id/id_btn_frg3_is_added"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="fragment3 is added?"/>
+    </TableLayout>
+
+    <FrameLayout
+        android:id="@+id/id_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/id_btn_add_frag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD  Fragment1"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/id_btn_add_frag2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD  Fragment2"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/id_btn_add_frag3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD  Fragment3" />
+
+        <Button
+            android:id="@+id/id_btn_add_frag4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD  Fragment4" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/id_btn_pop_back_stack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="popBackStack" />
+
+    <Button
+        android:id="@+id/id_btn_back_to_frg2_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BackToFrag2_0" />
+
+    <Button
+        android:id="@+id/id_btn_back_to_frg2_inclusive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BackToFrag2_INCLUSIVE" />
+
+    <FrameLayout
+        android:id="@+id/id_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
