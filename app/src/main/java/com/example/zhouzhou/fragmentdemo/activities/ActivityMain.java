@@ -32,7 +32,7 @@ public class ActivityMain extends ActivityBase implements FragmentBase.FragmentC
     private final int iShowHide = 7;
     private final int iAddReplaceBug = 8;
     private final int iArguments = 9;
-    private boolean bSingleFragment = false;
+    private boolean bSingleFragment = true;
     private int stackID1, stackID2, stackID3, stackID4;
     FragmentManager.OnBackStackChangedListener listener;
 
@@ -40,23 +40,17 @@ public class ActivityMain extends ActivityBase implements FragmentBase.FragmentC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        iSwitcher = iArguments;
+        iSwitcher = iStaticLoad;
 
         switch (iSwitcher) {
             case iStaticLoad:
                 staticLoadFragment();
-                break;
-            case iDynamicLoad:
-                dynamicLoadFragment();
                 break;
             case iAddRemoveReplace:
                 arrFragment();
                 break;
             case iBackStack:
                 backStackFragment();
-                break;
-            case iBackStackRule:
-                backStackFragmentRule();
                 break;
             case iShowHide:
                 showOrHideFragment();
@@ -73,41 +67,9 @@ public class ActivityMain extends ActivityBase implements FragmentBase.FragmentC
         }
     }
 
-    // MARK: begin--------------------------------------------------------------------------
     private void staticLoadFragment() {
         setContentView(R.layout.activity_fragment_static_load);
     }
-
-    private void dynamicLoadFragment() {
-        setContentView(R.layout.activity_fragment_dynamic_load);
-
-        Button btnLoadFrag1 = (Button) findViewById(R.id.id_btn_show_fragment1);
-        btnLoadFrag1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager manager = getSupportFragmentManager();
-                FragmentTransaction transaction = manager.beginTransaction();
-                Fragment1 fragment1 = new Fragment1();
-                transaction.add(R.id.id_fragment_container, fragment1);
-                transaction.commit();
-            }
-        });
-
-        Button btnLoadFrag2 = (Button) findViewById(R.id.id_btn_show_fragment2);
-        btnLoadFrag2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager manager = getSupportFragmentManager();
-                FragmentTransaction transaction = manager.beginTransaction();
-                Fragment2 fragment2 = new Fragment2();
-                transaction.add(R.id.id_fragment_container, fragment2);
-                transaction.commit();
-            }
-        });
-    }
-
-    // MARK: end--------------------------------------------------------------------------
-
 
 
     // MARK: begin--------------------------------------------------------------------------
@@ -229,39 +191,6 @@ public class ActivityMain extends ActivityBase implements FragmentBase.FragmentC
         });
 
         addOnBackStackChangedListener();
-    }
-
-    // 回退是以 commit() 提交的一次事务为单位的
-    private void backStackFragmentRule() {
-        setContentView(R.layout.activity_fragment_back_stack_rule);
-
-        Button btnAddFragment1 = (Button) findViewById(R.id.id_btn_add_frag1);
-        Button btnAddOtherFragment = (Button) findViewById(R.id.id_btn_add_other_frags);
-        Button btnPopBackStack = (Button) findViewById(R.id.id_btn_pop_back_stack);
-
-        btnAddFragment1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                stackID1 = addFragmentAndBackStack(new Fragment1(), "fragment1");
-            }
-        });
-
-        btnAddOtherFragment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                addOtherFragments();
-            }
-        });
-
-        btnPopBackStack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentManager manager = getSupportFragmentManager();
-                manager.popBackStack();
-            }
-        });
-
-       addOnBackStackChangedListener();
     }
 
     // MARK: end--------------------------------------------------------------------------

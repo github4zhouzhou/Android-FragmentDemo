@@ -44,26 +44,26 @@ abstract public class ActivityBase extends FragmentActivity {
 
     @Override
     public void onAttachFragment(Fragment fragment) {
-        Log.v(TAG, "------ " +  TAG + " ------ " + "onAttachFragment");
         super.onAttachFragment(fragment);
+        Log.v(TAG, "------ " +  TAG + " ------ " + "onAttachFragment");
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.v(TAG, "------ " +  TAG + " ------ " + "onCreate");
         super.onCreate(savedInstanceState);
+        Log.v(TAG, "------ " +  TAG + " ------ " + "onCreate");
     }
 
     @Override
     protected void onStart() {
-        Log.v(TAG, "------ " +  TAG + " ------ " + "onStart");
         super.onStart();
+        Log.v(TAG, "------ " +  TAG + " ------ " + "onStart");
     }
 
     @Override
     protected void onResume() {
-        Log.v(TAG, "------ " +  TAG + " ------ " + "onResume");
         super.onResume();
+        Log.v(TAG, "------ " +  TAG + " ------ " + "onResume");
     }
 
     @Override
