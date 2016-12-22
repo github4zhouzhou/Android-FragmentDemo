@@ -40,7 +40,7 @@ public class ActivityMain extends ActivityBase implements FragmentBase.FragmentC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        iSwitcher = iStaticLoad;
+        iSwitcher = iAddRemoveReplace;
 
         switch (iSwitcher) {
             case iStaticLoad:
